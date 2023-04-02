@@ -13,25 +13,32 @@
     </form>
   </nav>
 </br>
-  <table class="table">
+  <table class="table table-bordered">
     <thead>
       <tr>
       
         <th scope="col">id</th>
-        <th scope="col">title</th>
-        <th scope="col">content</th>
+        <th scope="col">Nom</th>
         <th scope="col">date</th>
+        <th scope="col">Malade</th>
+        <th scope="col">action</th>
       </tr>
     </thead>
     <tbody>
      
       
-        {% for p in posts %}
+        {% for p in patient %}
         <tr>
         <td>{{p.id}}</td>
-        <td>{{p.title}}</td>
-        <td>{{p.content}}</td>
-        <td>{{p.pub_date}}</td>
+        <td>{{p.nom}}</td>
+        <td>{{p.date}}</td>
+        <td>{{p.type}}</td>
+        
+        <td>
+          <button type="button" class="btn btn-primary"><i class="far fa-eye"></i></button>
+          <button type="button" class="btn btn-success"><i class="fas fa-edit"></i></button>
+        <button type="button" class="btn btn-danger"><i class="far fa-trash-alt"></i></button>
+        </td>
       </tr>
         {% endfor %}
       
