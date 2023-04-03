@@ -1,0 +1,33 @@
+{% extends "Header.html" %}
+
+{% block title%}Ajouer{% endblock title%}
+
+{% block body %}
+<div class="col-md-12">
+    <form method="POST" class="post-form" action="/ajouter">  
+        {% csrf_token %}  
+        <div class="container">  
+            <div class="col-12">  
+            <h3>Ajouter patient : </h3>  
+            </div>    
+         
+            <div class="mb-3"> 
+                <label>Nom</label>  
+                {{ form.nom }}   
+            </div> 
+            <div class="mb-3">  
+                <date>Date:</date>
+                {{ form.date }}   
+            </div> 
+             
+            <div class="mb-3"> 
+                <label>Type:</label>  
+                {{ form.type }}   
+            </div>
+            <div class="mb-3"> 
+                <button type="submit" class="btn btn-primary">Submit</button>    
+            </div> 
+        </div>  
+        </form>  
+</div>
+{% endblock body %}
