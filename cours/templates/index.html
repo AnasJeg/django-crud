@@ -5,7 +5,7 @@
 {% block body %}
  <div class="col-md-12">
         <br>
-        <span><a href="/ajouter" class="btn btn-primary">Add Patient</a></span>  
+        <span><a href="/add" class="btn btn-success">Add Patient</a></span>  
         <br>
         <br>
         <div class="table-responsive">
@@ -18,14 +18,14 @@
             <th>Action</th>
         </thead>
         <tbody>
-        {% for p in patient %}
+        {% for p in patients %}
             <tr>  
                 <td>{{ p.id }}</td>
                 <td>{{ p.nom }}</td>
                 <td>{{ p.date }}</td>
                 <td>{{ p.type }}</td> 
-                <td><a href="/edit/{{ employee.id }}" class="btn btn-primary">edit</a></td>
-                <td><a href="/delete/{{ employee.id }}" class="btn btn-danger">delete</a></td>  
+                <td><a href="/update/{{ p.id }}" class="btn btn-info">edit </a>  <a href="/delete/{{ p.id }}" class="btn btn-danger"> delete</a></td>
+
               
             </tr>  
         {% endfor %} 

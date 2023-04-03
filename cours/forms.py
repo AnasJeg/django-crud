@@ -5,8 +5,7 @@ from cours.models import Patient
 class PatientF(forms.ModelForm):
     class Meta:
         model = Patient
-        fields = ['nom', 'date', 'type']
+        fields = ['nom', 'type']
         widgets = {'nom': forms.TextInput(attrs={'class': 'form-control'}),
-                   'date': forms.DateInput(attrs={'class': 'form-control'}),
                    'type': forms.TextInput(attrs={'class': 'form-control'}),
                    }
