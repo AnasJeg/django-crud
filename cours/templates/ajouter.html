@@ -8,7 +8,7 @@
         {% csrf_token %}  
         <div class="container">  
             <div class="col-12">  
-            <h3>Ajouter patient : </h3>  
+            <h3> <center>Ajouter patient :</center> </h3>  
             </div>    
          
             <div class="mb-3"> 
@@ -16,8 +16,9 @@
                 {{ form.nom }}   
             </div> 
             <div class="mb-3">  
-                <label type="date">Date:</label>
-                {{ form.date }}   
+                <label type="date" >Date:</label>
+                {{ form.date }}
+                
             </div> 
              
             <div class="mb-3"> 
@@ -25,7 +26,7 @@
                 {{ form.type }}   
             </div>
             <div class="mb-3"> 
-                <button type="submit" class="btn btn-primary">Submit</button>    
+                <button type="submit" class="btn btn-success">Ajouter</button>    
             </div> 
         </div>  
         </form>  
